@@ -102,7 +102,7 @@ class CalcScreen(tk.Frame):
                 self.controller.shared_result.set(str(result_value))
                 controller.show_frame(ResultScreen)
             except InvalidEquation:
-                cnt.config(text="Whoops! You entered incorrect expression :3")
+                cnt.config(text="Некорректное выражение")
             expression.clear()
             variables.clear()
             final.clear()
@@ -239,7 +239,6 @@ class Results(object):
             for pattern, repl in self.replacements:
                 while re.search(pattern, self.phrases[ind]) != None:
                     self.phrases[ind] = re.sub(pattern, repl, self.phrases[ind])
-        print(self.phrases)
         return self.phrases
 
     def calculate(self, *args):
