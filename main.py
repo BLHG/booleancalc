@@ -7,7 +7,7 @@ import itertools
 class Root(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.title("test")
+        self.title("Boolean Calculator")
         self.shared_result = tk.StringVar()
         self.geometry("420x500")
         self.minsize(420, 500)
